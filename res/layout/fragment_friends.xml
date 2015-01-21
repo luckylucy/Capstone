@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:gravity="center">
+    
+    <Button
+        android:id="@+id/KakaoTalkToFriend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send KakaoTalk to My Friend" />
+    
+    <Button
+        android:id="@+id/SMSToFriend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send SMS to My Friend" />
+    
+    <Button 
+        android:id="@+id/AskCommunityForHelp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ask Community For Help"/>
+
+</LinearLayout>

@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <EditText
+             android:paddingTop="10dp"
+            android:id="@+id/callerName"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.01"
+            android:hint="이름" />
+
+        <Button
+       
+            android:id="@+id/phoneBook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="P" />
+        
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/callerPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:ems="10"
+        android:hint="전화번호"
+        android:inputType="number"
+        android:paddingTop="10dp" >
+
+        <requestFocus />
+    </EditText>
+
+<!-- <Button
+        android:id="@+id/DatePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="날짜"/>-->
+        
+    <Button
+        android:id="@+id/ring"
+        android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="left"
+		android:text="벨소리"/>    
+	
+    <Switch
+        android:id="@+id/vibrationSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:padding="10dp" 
+        android:text="Vibration"
+        android:textColor="@android:color/holo_red_dark"
+        />
+
+	<Spinner
+        android:id="@+id/secSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/> 
+    
+
+     <Button 
+        android:id="@+id/OK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="확인"
+        android:layout_gravity="center"/>
+        
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/darker_gray" >
+
+    <TextView
+        android:id="@+id/incommingcall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="대기"
+        android:textSize="30dp" />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="29dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_launcher" />
+    
+    <TextView
+        android:id="@+id/name1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="이름"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/number1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="전화번호"
+        android:textSize="30dp" />
+
+       <Button
+           android:id="@+id/end"
+           android:layout_width="260dp"
+           android:layout_height="50dp"
+           android:layout_gravity="center"
+           android:background="@drawable/end" />
+
+    </LinearLayout>
