@@ -42,4 +42,11 @@ public class WaitingState extends Activity{
 				}
 	        });
 	   }
+	   public void onBackPressed(){
+			Intent BackToTheMain = new Intent(WaitingState.this, MainActivity.class);
+			
+			BackToTheMain.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+			BackToTheMain.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			startActivity(BackToTheMain);
+		}
 }

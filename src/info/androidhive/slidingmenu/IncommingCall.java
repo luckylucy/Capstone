@@ -98,4 +98,14 @@ public class IncommingCall extends Activity {
 
 	       });
 	  } 
+	public void onBackPressed(){
+		Intent BackToTheMain = new Intent(IncommingCall.this, MainActivity.class);
+		
+		BackToTheMain.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+		BackToTheMain.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		startActivity(BackToTheMain);
+		
+		ringtone.stop();
+		vibrator.cancel();
+	}
 }

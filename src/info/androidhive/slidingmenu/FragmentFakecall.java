@@ -142,8 +142,22 @@ public class FragmentFakecall extends Fragment {
 		
 			@Override
 			public void onClick(View arg0) {
-				Toast.makeText(getActivity(), "Click", Toast.LENGTH_SHORT).show();
-				setAlarm(getActivity(), second);
+				if(stringcallername==null || stringcallerphonenumber ==null){
+					Toast.makeText(getActivity(), "null", Toast.LENGTH_SHORT).show();
+
+					AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
+					alert.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+						
+						@Override
+						public void onClick(DialogInterface dialog, int which) {
+							dialog.dismiss();
+						}
+					});
+					alert.setMessage("이름과 전화번호를 입력해주세요");
+					alert.show();
+				}
+				else
+					setAlarm(getActivity(), second);
 			}
 		});
         return rootView;
@@ -225,8 +239,8 @@ public class FragmentFakecall extends Fragment {
 			Toast.makeText(getActivity().getApplicationContext(), stringcallername, Toast.LENGTH_SHORT).show();
 			Toast.makeText(getActivity().getApplicationContext(), stringcallerphonenumber, Toast.LENGTH_SHORT).show();
 			
-			stringcallername=null;
-			stringcallerphonenumber=null;
+//			stringcallername=null;
+//			stringcallerphonenumber=null;
 			break;
 		}
 		
