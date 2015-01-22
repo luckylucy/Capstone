@@ -13,7 +13,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class FragmentSendMessage extends Activity {
-	private static final int SHOW_CONTACT=1;
 	CheckBox address, e1,e2,e3,e4,e5,e6,e7,e8,e9;
 	EditText message;
 	Button send;
@@ -38,7 +37,7 @@ public class FragmentSendMessage extends Activity {
 
 		
 		message = (EditText)findViewById(R.id.sendMessage);
-		send = (Button) findViewById(R.id.Send);
+		send = (Button) findViewById(R.id.send);
 		send.setOnClickListener(new OnClickListener(){
 
 			@Override
@@ -48,21 +47,15 @@ public class FragmentSendMessage extends Activity {
 				if(e3.isChecked()) CheckList +=e3.getText().toString();
 				if(e4.isChecked()) CheckList +=e4.getText().toString();
 				if(e5.isChecked()) CheckList +=e5.getText().toString();
-				if(e6.isChecked()) CheckList +=e6.getText().toString();
-				if(e7.isChecked()) CheckList +=e7.getText().toString();
-				if(e8.isChecked()) CheckList +=e8.getText().toString();
-				if(e9.isChecked()) CheckList +=e9.getText().toString();
+
 
 				FullMessage = address.getText().toString()+"##"+CheckList+"##"+message.getText().toString();
 
+			
 				
-				Intent contactPeople1 = new Intent(Intent.ACTION_PICK);
-				contactPeople1.setData(ContactsContract.CommonDataKinds.Phone.CONTENT_URI);
-				startActivityForResult(contactPeople1,0);
-				
-//				Intent SendIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:"));
-//				SendIntent.putExtra("sms_body", FullMessage);
-//				startActivity(SendIntent);
+				Intent SendIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:"));
+				SendIntent.putExtra("sms_body", FullMessage);
+				startActivity(SendIntent);
 			}
 			
 		});
