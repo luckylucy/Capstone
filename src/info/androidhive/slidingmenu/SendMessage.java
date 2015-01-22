@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class SendMessage extends Activity {
-	CheckBox address, e1,e2,e3,e4,e5,e6,e7,e8,e9;
+	CheckBox address, e1,e2,e3,e4,e5;
 	EditText message;
 	Button send;
 	CurrentLocation location;
@@ -33,10 +33,7 @@ public class SendMessage extends Activity {
 		e3= (CheckBox)findViewById(R.id.emergency3);
 		e4 = (CheckBox)findViewById(R.id.emergency4);
 		e5 = (CheckBox)findViewById(R.id.emergency5);
-		e6= (CheckBox)findViewById(R.id.emergency6);
-		e7= (CheckBox)findViewById(R.id.emergency7);
-		e8 = (CheckBox)findViewById(R.id.emergency8);
-		e9 = (CheckBox)findViewById(R.id.emergency9);
+		
 		
 		message = (EditText)findViewById(R.id.sendMessage);
 		send = (Button) findViewById(R.id.Send);
@@ -44,15 +41,12 @@ public class SendMessage extends Activity {
 
 			@Override
 			public void onClick(View arg0) {
-				if(e1.isChecked()) CheckList +=e1.getText().toString();
-				if(e2.isChecked()) CheckList +=e2.getText().toString();
-				if(e3.isChecked()) CheckList +=e3.getText().toString();
-				if(e4.isChecked()) CheckList +=e4.getText().toString();
-				if(e5.isChecked()) CheckList +=e5.getText().toString();
-				if(e6.isChecked()) CheckList +=e6.getText().toString();
-				if(e7.isChecked()) CheckList +=e7.getText().toString();
-				if(e8.isChecked()) CheckList +=e8.getText().toString();
-				if(e9.isChecked()) CheckList +=e9.getText().toString();
+				if(e1.isChecked()) CheckList +=e1.getText().toString()+"/";
+				if(e2.isChecked()) CheckList +=e2.getText().toString()+"/";
+				if(e3.isChecked()) CheckList +=e3.getText().toString()+"/";
+				if(e4.isChecked()) CheckList +=e4.getText().toString()+"/";
+				if(e5.isChecked()) CheckList +=e5.getText().toString()+"/";
+			
 
 				FullMessage = address.getText().toString()+"##"+CheckList+"##"+message.getText().toString();
 
