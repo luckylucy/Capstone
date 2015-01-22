@@ -28,8 +28,7 @@ public class FragmentFriends extends Fragment {
 
 			@Override
 			public void onClick(View arg0) {
-				Intent sendMessage = new Intent(getActivity(), SendMessage.class);
-				startActivity(sendMessage);
+				
 			}
 			
 		});
@@ -39,9 +38,8 @@ public class FragmentFriends extends Fragment {
 
 			@Override
 			public void onClick(View v) {
-				Intent SendIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:01020158382"));
-				SendIntent.putExtra("sms_body", "살려주세요");
-				startActivity(SendIntent);
+				Intent sendMessage = new Intent(getActivity(), FragmentSendMessage.class);
+				startActivity(sendMessage);
 			}			
 		});
 		

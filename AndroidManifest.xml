@@ -59,6 +59,7 @@
         <activity android:name="SendMessage" android:label=".SendMessage"/>
         <activity android:name="TabFragment" android:label=".TabFragment"/>
         <activity android:name="FirstFragment" android:label=".FirstFragment"/>
+        <activity android:name="FragmentSendMessage" android:label=".FragmentSendMessage"/>
         <activity android:name="com.example.capstone.activities.WebViewActivity" android:label=".WebViewActivity"/>
         
         <receiver android:name=".IncomingCall">
