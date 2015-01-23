@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- selected -->
+     <item android:state_selected="true"
+        android:drawable="@drawable/hi1" />
+     <!-- pressed -->
+     <item android:state_pressed="true"
+        android:drawable="@drawable/hi1" />
+    <!-- focused -->
+    <item android:state_focused="true"
+        android:drawable="@drawable/hi1" />
+    <!-- default -->
+    <item android:drawable="@drawable/hi2" />
+    
+</selector>

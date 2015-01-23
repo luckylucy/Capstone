@@ -14,14 +14,14 @@ import com.example.capstone.adapter.PagerAdapter;
 import com.example.capstone.view.PagerSlidingTabStrip;
 
 
-public class TabFragment extends Fragment{
+public class FragmentTab extends Fragment{
 
 	private ViewPager viewPager;
 	private PagerAdapter pagerAdapter;
 	private PagerSlidingTabStrip tabs;
 
 
-	public TabFragment() {
+	public FragmentTab() {
 		super();
 	}
 

@@ -30,13 +30,14 @@ import android.widget.Toast;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 
-public class FragmentFakecall extends Fragment {
+public class FragmentFakecall extends Fragment implements OnClickListener {
 	private static final int SHOW_CONTACT=1;
 	private static final int SHOW_RING=2;
 	
 	ArrayList arraylist=null;
 	
 	Button phoneBook, date, ring, ok;
+	Button start, start5, start30, start60, start300;
 	EditText callerName, callerPhoneNumber;
 	
 	String stringcallername=null, stringcallerphonenumber=null;
@@ -101,40 +102,52 @@ public class FragmentFakecall extends Fragment {
 			});
 		
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////		
-		secSpinner = (Spinner) rootView.findViewById(R.id.secSpinner);
+//		secSpinner = (Spinner) rootView.findViewById(R.id.secSpinner);
+//		
+//		arraylist = new ArrayList<String>();
+//		arraylist.add("	바로시작");
+//		arraylist.add("5초 후 ");
+//		arraylist.add("15초 후 ");
+//		arraylist.add("30초 후 ");
+//		arraylist.add("1분 후");
+//		arraylist.add("5분 후");
+//		arraylist.add("30분 후 ");
+//		
+//		ArrayAdapter <String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item,arraylist);
+//		secSpinner.setPrompt("골라봐!");
+//		secSpinner.setAdapter(adapter);
+//		
+//		secSpinner.setOnItemSelectedListener(new OnItemSelectedListener(){
+//		
+//			@Override
+//			public void onItemSelected(AdapterView<?> arg0, View arg1,int arg2, long arg3) {
+//			switch(arg2){
+//				case 1: second=5; break;
+//				case 2: second=15; break;
+//				case 3: second=30; break;
+//				case 4: second=60; break;
+//				case 5: second=60*5; break;
+//				case 6: second=60*30; break;
+//				default: second=0;	
+//			}
+//		}
+//			@Override
+//			public void onNothingSelected(AdapterView<?> arg0) {
+//				
+//			}
+//		});
+		start=(Button)rootView.findViewById(R.id.start);
+		start5=(Button)rootView.findViewById(R.id.start5);
+		start30=(Button)rootView.findViewById(R.id.start30);
+		start60=(Button)rootView.findViewById(R.id.start60);
+		start300=(Button)rootView.findViewById(R.id.start300);
 		
-		arraylist = new ArrayList<String>();
-		arraylist.add("	바로시작");
-		arraylist.add("5초 후 ");
-		arraylist.add("15초 후 ");
-		arraylist.add("30초 후 ");
-		arraylist.add("1분 후");
-		arraylist.add("5분 후");
-		arraylist.add("30분 후 ");
-		
-		ArrayAdapter <String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item,arraylist);
-		secSpinner.setPrompt("골라봐!");
-		secSpinner.setAdapter(adapter);
-		
-		secSpinner.setOnItemSelectedListener(new OnItemSelectedListener(){
-		
-			@Override
-			public void onItemSelected(AdapterView<?> arg0, View arg1,int arg2, long arg3) {
-			switch(arg2){
-				case 1: second=5; break;
-				case 2: second=15; break;
-				case 3: second=30; break;
-				case 4: second=60; break;
-				case 5: second=60*5; break;
-				case 6: second=60*30; break;
-				default: second=0;	
-			}
-		}
-			@Override
-			public void onNothingSelected(AdapterView<?> arg0) {
-				
-			}
-		});
+		start.setOnClickListener(this);
+		start5.setOnClickListener(this);
+		start30.setOnClickListener(this);
+		start60.setOnClickListener(this);
+		start300.setOnClickListener(this);
+
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////		
 
 		ok=(Button)rootView.findViewById(R.id.OK);
@@ -260,6 +273,52 @@ public class FragmentFakecall extends Fragment {
 			break;
 		}
 	}
-}	
+}
+
+	@Override
+	public void onClick(View v) {
+		if(v==start){
+			start.setSelected(true);
+			start5.setSelected(false);
+			start30.setSelected(false);
+			start60.setSelected(false);
+			start300.setSelected(false);
+			second=0;
+		}
+		else if(v==start5){
+			start.setSelected(false);
+			start5.setSelected(true);
+			start30.setSelected(false);
+			start60.setSelected(false);
+			start300.setSelected(false);	
+			second=5;
+		}
+		else if(v==start30){
+			start.setSelected(false);
+			start5.setSelected(false);
+			start30.setSelected(true);
+			start60.setSelected(false);
+			start300.setSelected(false);
+			second=30;
+		}
+		else if(v==start60){
+			start.setSelected(false);
+			start5.setSelected(false);
+			start30.setSelected(false);
+			start60.setSelected(true);
+			start300.setSelected(false);	
+			second=60;	
+		}
+		else {
+			start.setSelected(false);
+			start5.setSelected(false);
+			start30.setSelected(false);
+			start60.setSelected(false);
+			start300.setSelected(true);
+			second=60*30;
+		}
+			
+		
+	}	
 	
 }

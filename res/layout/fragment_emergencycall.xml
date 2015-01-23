@@ -31,4 +31,14 @@
         android:layout_alignRight="@+id/sms"
         android:layout_below="@+id/sms" />
 
+    <RadioButton
+        android:id="@+id/radioButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/phone"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="14dp"
+        android:layout_marginLeft="37dp"
+        android:text="RadioButton" />
+
 </RelativeLayout>

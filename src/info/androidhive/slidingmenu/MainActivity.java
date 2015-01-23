@@ -4,7 +4,7 @@ package info.androidhive.slidingmenu;
 import java.util.ArrayList;
 
 import com.example.capstone.adapter.NavDrawerListAdapter;
-import com.example.capstone.fragments.TabFragment;
+import com.example.capstone.fragments.FragmentTab;
 import com.example.capstone.model.NavDrawerItem;
 
 import android.app.Activity;
@@ -73,6 +73,7 @@ public class MainActivity extends FragmentActivity {
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[3], navMenuIcons.getResourceId(3, -1)));
 		// Pages
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1)));		
+		navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(5, -1)));		
 
 		// Recycle the typed array
 		navMenuIcons.recycle();
@@ -172,12 +173,15 @@ public class MainActivity extends FragmentActivity {
 			fragment = new FragmentFriends();
 			break;
 		case 2:
-			fragment = new TabFragment();
+			fragment = new FragmentTab();
 			break;
 		case 3:
 			fragment = new FragmentFakecall();
 			break;
 		case 4:
+			fragment= new FragmentCommunity();
+			break;	
+		case 5:
 			fragment = new FragmentFlash();
 			break;
 		default:

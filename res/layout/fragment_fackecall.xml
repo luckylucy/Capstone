@@ -64,12 +64,51 @@
         android:textColor="@android:color/holo_red_dark"
         />
 
-	<Spinner
+
+<!-- 
+<Spinner
         android:id="@+id/secSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/> 
+ -->
+	
     
-
+<GridLayout
+   	     android:id="@+id/gridview"
+   	     android:layout_width="wrap_content"
+   	     android:layout_height="wrap_content"
+   	     android:layout_alignLeft="@+id/textview1"
+   	     android:layout_below="@+id/textview1"
+   	     android:columnCount="5" >
+    
+   	     <Button
+   	         android:id="@+id/start"
+   	         android:background="@drawable/icon_on_off"
+   	         android:layout_height="60dp"
+   	         android:layout_width="60dp"/>
+   	     <Button
+   	         android:id="@+id/start5"
+   	         android:background="@drawable/icon_on_off"
+   	         android:layout_height="60dp"
+   	         android:layout_width="60dp"/>
+   	     <Button
+   	         android:id="@+id/start30"
+   	         android:background="@drawable/icon_on_off"
+   	         android:layout_height="60dp"
+   	         android:layout_width="60dp"/>
+   	     <Button
+   	         android:id="@+id/start60"
+   	         android:background="@drawable/icon_on_off"
+   	         android:layout_height="60dp"
+   	         android:layout_width="60dp"/>
+   	     <Button
+   	         android:id="@+id/start300"
+   	         android:background="@drawable/icon_on_off"
+   	         android:layout_height="60dp"
+   	         android:layout_width="60dp"/>
+  
+   	     
+    </GridLayout>
      <Button 
         android:id="@+id/OK"
         android:layout_width="wrap_content"
